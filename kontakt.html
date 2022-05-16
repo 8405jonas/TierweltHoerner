@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+<video id="background-video" autoplay loop muted >
+  <source src="images/waldvideo.mp4" type="video/mp4">
+</video>
+
+<header>
+  <h1>Die bekanntesten Geweih- und Hornträger</h1>
+  <nav>
+    <a href="index.html">Starseite</a>
+    <a href="geweihträger.html">Geweihträger</a>
+    <a href="hornträger.html">Hornträger</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="galerie.html">Galerie</a>
+  </nav>
+
+  <h2>Impressum</h2>
+
+
+  <br>
+</header><main>
+  <h1>Kontakt</h1><br>
+  <form class="kontaktformular">
+    <label>Vorname: </label>
+    <input type="text" id="vorname" placeholder="Vorname">
+    <label>Nachname: </label>
+    <input type="text" id="nachname" placeholder="Nachname">
+    <label>Betreff: </label>
+    <input type="text" id="betreff" placeholder="Betreff">
+    <label>Nachricht: </label>
+    <textarea rows="3" cols="30" id="mailtext" placeholder="Nachricht"></textarea><br>
+    <button type="submit" onclick="abschicken()">Senden</button>
+  </form>
+</main>
+</form>
+
+
+<footer>
+  <div class="unten">
+    Mail:<a href="mailto:zentrale.dienste@bbw.zh.ch">zentrale.dienste@bbw.zh.ch</a>, Telefon:<a
+          href="tel:+41 52 267 81 81">052 267 81 81</a>,  Kontakt:<a href="kontakt.html">Kontakt</a>
+    <br>
+    &copy; by Jonas Züst 2022
+    </a>
+  </div>
+</footer>
+
+
+<script>
+  function abschicken() {
+    let link = "mailto:aaron.j.rhyner@gmail.com" +
+            "?subject=" + encodeURIComponent(document.getElementById('betreff').value) +
+            "&body=" + encodeURIComponent("Guten Tag Aaron Rhyner\n\n") +
+            encodeURIComponent(document.getElementById('mailtext').value) + encodeURIComponent("\n\n") +
+            encodeURIComponent("Freundliche Grüsse ") + encodeURIComponent(document.getElementById('vorname').value) +
+            encodeURIComponent(" ") + encodeURIComponent(document.getElementById('nachname').value)
+    window.location.href = link;
+  }
+</script>
+
+
+</body>
+</html>
